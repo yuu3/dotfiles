@@ -152,6 +152,8 @@
   :init (editorconfig-mode)
 )
 
+(use-package indent-guide)
+
 (use-package rg
   :config
   (rg-enable-menu)
