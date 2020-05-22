@@ -79,6 +79,16 @@
   (set-face-foreground 'whitespace-tab "#669125")
   (set-face-background 'whitespace-tab 'nil)
   (set-face-underline  'whitespace-tab t)
+  )
+
+(use-package paren
+  :ensure nil
+  :hook
+  (after-init . show-paren-mode)
+  (after-init . electric-pair-mode)
+  :custom
+  (show-paren-delay 0)
+  (show-paren-style 'parenthesis)
 )
 
 ;;;; keybind
