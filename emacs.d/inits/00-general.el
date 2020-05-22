@@ -31,7 +31,7 @@
 (set-scroll-bar-mode nil)
 (set-fringe-mode 0)
 (blink-cursor-mode nil)
-(fset 'yes-or-no-p 'y-or-n-p)
+(defalias 'yes-or-no-p 'y-or-n-p)
 (setq frame-title-format "%f") ; titilebar file full name
 (setq split-width-threshold 9999999)
 (if (display-graphic-p)
