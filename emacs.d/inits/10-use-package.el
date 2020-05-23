@@ -273,8 +273,6 @@
     :default "c++")
 )
 
-;; (use-package flymake)
-
 (use-package lsp-mode
   :commands lsp
   :custom
@@ -292,7 +290,6 @@
 
 (use-package company-lsp
   :after lsp-mode
-
 )
 
 ;;; markup lang
@@ -313,6 +310,7 @@
   :config
   (setq plantuml-jar-path (concat (getenv "HOME") "/.emacs.d/straight/repos/plantuml-mode/bin/plantuml.jar"))
 )
+
 (use-package flycheck-plantuml
   :hook
   (plantuml-mode . flycheck-plantuml-setup)
