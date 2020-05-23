@@ -122,19 +122,6 @@
   ("C-x C-f" . helm-ls-git-ls)
   ("C-c i" . helm-imenu)
   ("C-x r l" . helm-bookmarks))
-  :init
-  (use-package helm-ls-git
-    :config
-    (custom-set-variables
-      '(helm-source-ls-git (helm-ls-git-build-ls-git-source))
-    )
-  )
-  (use-package helm-xref
-    :config
-    (setq xref-show-xrefs-function 'helm-xref-show-xrefs))
-  (use-package helm-tramp)
-  (use-package docker-tramp)
-  (use-package helm-ghq)
   :config
   (custom-set-variables
     '(helm-split-window-default-side 'right)
@@ -145,6 +132,22 @@
         helm-source-file-cache))
   )
 )
+
+(use-package helm-ls-git
+  :config
+  (custom-set-variables
+    '(helm-source-ls-git (helm-ls-git-build-ls-git-source))
+  )
+)
+
+(use-package helm-xref
+  :config
+  (setq xref-show-xrefs-function 'helm-xref-show-xrefs)
+)
+
+(use-package helm-tramp)
+(use-package docker-tramp)
+(use-package helm-ghq)
 
 (use-package undo-tree
   :diminish undo-tree-mode
