@@ -36,3 +36,6 @@ indent_size = 2
 
 [*.puml]
 tab_width = 2
+
+[*.rb]
+indent_size = 2
