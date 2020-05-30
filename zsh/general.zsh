@@ -5,9 +5,6 @@ setopt transient_rprompt          # 右側まで入力がきたら時間を消�
 
 fpath+=($HOME/.config/zsh/func $fpath)
 
-autoload -U compinit
-compinit
-
 HISTFILE=~/.zsh_history
 HISTSIZE=20000
 SAVEHIST=20000
