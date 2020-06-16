@@ -131,6 +131,8 @@
         helm-source-recentf
         helm-source-file-cache))
   )
+  :custom
+  (history-delete-duplicates t)
 )
 
 (use-package helm-ls-git
@@ -259,6 +261,9 @@
   (set-face-background 'company-preview "green")
   :custom
   (company-idle-delay nil)
+  (company-dabbrev-downcase nil)
+  (company-dabbrev-ignore-case t)
+  (completion-ignore-case t)
   :config
   (delete 'company-clang company-backends)
 )
