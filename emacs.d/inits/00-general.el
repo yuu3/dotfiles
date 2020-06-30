@@ -11,13 +11,7 @@
 (setq history-length 3000) ; Up history num
 (setq recentf-max-saved-itemds 3000)
 
-(set-language-environment "Japanese")
 (prefer-coding-system 'utf-8-unix)
-(set-default-coding-systems 'utf-8)
-(setq-default buffer-file-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(setq file-name-coding-system 'utf-8)
 
 (setq-default indent-tabs-mode nil)
 
