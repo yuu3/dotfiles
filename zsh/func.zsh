@@ -121,3 +121,7 @@ rpmcat() {
 rpmshow() {
     rpm -qlp $1
 }
+
+resolve-name() {
+    ping -c 1 $1 |head -n 1 |grep -Po '(?<=\()\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}(?=\))'
+}
