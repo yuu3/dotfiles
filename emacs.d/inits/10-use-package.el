@@ -312,8 +312,9 @@
   :mode
   (("\\.puml\\'" . plantuml-mode)
   ("\\.plantuml\\'" . plantuml-mode))
-  :config
-  (setq plantuml-jar-path (concat (getenv "HOME") "/.emacs.d/straight/repos/plantuml-mode/bin/plantuml.jar"))
+  :custom
+  (plantuml-jar-path (concat (getenv "HOME") "/.emacs.d/straight/repos/plantuml-mode/bin/plantuml.jar"))
+  (plantuml-default-exec-mode 'jar)
 )
 
 (use-package flycheck-plantuml
