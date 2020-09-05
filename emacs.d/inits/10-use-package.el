@@ -379,6 +379,25 @@
 )
 
 ;;; web
-(use-package web-mode)
+(use-package web-mode
+  :mode
+  (("\\.html\\'" . web-mode)
+  ("\\.js\\'" . web-mode)
+  ("\\.jsx\\'" . web-mode)
+  ("\\.ts\\'" . web-mode)
+  ("\\.tsx\\'" . web-mode))
+)
 (use-package emmet-mode)
-(use-package rjsx-mode)
+
+;; typescript LSP
+(use-package tide
+  :init
+  (add-hook 'web-mode
+    (lambda () (tide-setup))
+    )
+  :custom
+  (tide-completion-ignore-case t)
+)
+
+;;; golang
+(use-package go-mode)
