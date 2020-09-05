@@ -18,8 +18,6 @@
 ;;; view
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-(set-scroll-bar-mode nil)
-(set-fringe-mode 0)
 (blink-cursor-mode nil)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq frame-title-format "%f") ; titilebar file full name
