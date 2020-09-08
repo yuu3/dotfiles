@@ -10,7 +10,7 @@ export GPG_TTY=`tty`
 # python
 export PYTHONSTARTUP=~/.config/python/pythonstartup
 
-export GOPATH=$HOME
+export GOPATH=$HOME/.local
 path=(~/.local/bin(N-/) /usr/local/bin(N-/) /usr/local/sbin(N-/) ${path})
 
 
