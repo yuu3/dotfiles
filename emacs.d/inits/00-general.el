@@ -38,3 +38,14 @@
 (setq comint-scroll-show-maximum-output t) ; shell-mode
 
 (setq isearch-wrap-function '(lambda nil)) ; disable wrapping in isearch
+
+;; デフォルトでは、ウィンドウを分割したとき、
+;; Emacsは分割されたウィンドウのサイズをフレームのデフォルトフォントの整数倍にします。
+;; これによりスクリーンが正確に2分割されない場合があります。
+;; 変数window-resize-pixelwiseを非nil値にセットすると、
+;; Emacsは分割されたウィンドウのサイズを、同じピクセル数にします
+;; (元のサイズが奇数のピクセル数の場合、1ピクセル増減されます)。
+;; フレームのピクセル数がフレームの文字サイズ倍でない場合、
+;; このオプションがnilでも、
+;; 少なくとも1つのウィンドウがピクセル幅のサイズ変更をされることに注意してください。
+(setq window-resize-pixelwise)
