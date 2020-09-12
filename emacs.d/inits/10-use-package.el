@@ -229,6 +229,13 @@
 )
 
 ;;; vsc
+(defun magit-display-buffer-status-same-window (buffer)
+  "Display BUFFER the way this has traditionally been done."
+  (display-buffer
+    buffer (if (with-current-buffer buffer
+                 (derived-mode-p 'magit-status-mode))
+             '(display-buffer-same-window)
+             nil))) ; display in another window
 (use-package magit
   :bind
   (("C-x c g" . magit-status))
@@ -237,6 +244,8 @@
   (set-face-bold 'magit-branch-local t)
   (set-face-foreground 'magit-branch-remote "brightred")
   (set-face-bold 'magit-branch-remote t)
+  :custom
+  (magit-display-buffer-function 'magit-display-buffer-status-same-window)
 )
 
 (use-package git-gutter
