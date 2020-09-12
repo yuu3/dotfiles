@@ -22,11 +22,15 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq frame-title-format "%f") ; titilebar file full name
 
-;;; Always split window horizontal
 ;; 整数の場合は、元のウィンドウが最低でもその行数なければ分割しないことを意味する。
 ;; nilの場合は、この方法では分割しないことを意味する。
-(setq split-width-threshold 9999999)
-(setq split-height-threshold nil)
+(defun adjust-window-split-thresholds nil
+  "Adjust split thresholds so that popup windows always split vertically in a tall frame, horizontally in a wide frame, with a maximum of two columns"
+  (interactive)
+  (setq split-width-threshold  (+ (/ (frame-width) 2) 10)) ; 10 = offset. when exist 2 window, don't split
+  (setq split-height-threshold nil)
+)
+(add-hook 'window-configuration-change-hook 'adjust-window-split-thresholds)
 
 (if (display-graphic-p)
   (menu-bar-mode t))
