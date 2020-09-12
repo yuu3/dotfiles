@@ -21,7 +21,13 @@
 (blink-cursor-mode nil)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq frame-title-format "%f") ; titilebar file full name
+
+;;; Always split window horizontal
+;; 整数の場合は、元のウィンドウが最低でもその行数なければ分割しないことを意味する。
+;; nilの場合は、この方法では分割しないことを意味する。
 (setq split-width-threshold 9999999)
+(setq split-height-threshold nil)
+
 (if (display-graphic-p)
   (menu-bar-mode t))
 
