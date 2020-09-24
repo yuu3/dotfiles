@@ -228,6 +228,12 @@
       (list 430675 2721866130)))
 )
 
+(use-package exec-path-from-shell
+  :config
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize))
+)
+
 ;;; vsc
 (defun magit-display-buffer-status-same-window (buffer)
   "Display BUFFER the way this has traditionally been done."
