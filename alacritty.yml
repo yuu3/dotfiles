@@ -16,55 +16,56 @@ env:
 # Window dimensions in character columns and lines
 # (changes require restart)
 dimensions:
-  columns: 160
-  lines: 40
+  columns: 200
+  lines: 60
 
 # Adds this many blank pixels of padding around the window
 # Units are physical pixels; this is not DPI aware.
 # (change requires restart)
-padding:
-  x: 2
-  y: 2
+#padding:
+#  x: 2
+#  y: 2
 
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
-dpi:
-  x: 96.0
-  y: 96.0
+#dpi:
+#  x: 96.0
+#  y: 96.0
 
 # Display tabs using this many cells (changes require restart)
-tabspaces: 8
+#tabspaces: 8
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
 
 font:
   normal:
-    family: Source Code Pro
-    style: Medium
+    family: Source Han Code JP
+    style: M
 
   bold:
-    family: Source Code Pro
-    style: Bold
+    #family: Source Code Pro
+    family: Source Han Code JP
+    style: B
 
   italic:
-    family: Source Code Pro
-    style: Italic
+    family: Source Han Code JP
+    style: M It
 
-  size: 12.0
+  size: 12
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: 0.0
-    y: 0.0
+    x: 0
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increase the x offset to move the glyph to
   # the right, increase the y offset to move the glyph upward.
   glyph_offset:
-    x: 0.0
-    y: 0.0
+    x: 0
+    y: 0
 
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
@@ -83,7 +84,7 @@ hide_cursor_when_typing: false
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
-background_opacity: 0.8
+background_opacity: 0.9
 
 # Colors (hybrid: https://gist.github.com/w0ng/3278077)
 colors:
@@ -164,7 +165,7 @@ colors:
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
 
@@ -386,3 +387,14 @@ key_bindings:
   - { key: Key8,     mods: Alt|Shift, chars: "\x1b*"                     } # Alt + *
   - { key: Key3,     mods: Alt|Shift, chars: "\x1b#"                     } # Alt + #
   - { key: Space,    mods: Control,   chars: "\x00"                      }
+  - { key: Period,    mods: Alt|Shift, chars: "\x1b>"                       } # Alt + >
+  - { key: Comma,     mods: Alt|Shift, chars: "\x1b<"                       } # Alt + <
+  - { key: Minus,     mods: Alt|Shift, chars: "\x1b_"                       } # Alt + _
+  - { key: Key5,      mods: Alt|Shift, chars: "\x1b%"                       } # Alt + %
+  - { key: Key6,      mods: Alt|Shift, chars: "\x1b^"                       } # Alt + ^
+  - { key: Backslash, mods: Alt,       chars: "\x1b\\"                      } # Alt + \
+  - { key: Backslash, mods: Alt|Shift, chars: "\x1b|"                       } # Alt + |
+  - { key: Semicolon, mods: Control,   chars: "\x18\x40\x63\x3b"            } # Ctrl + ;
+  - { key: Semicolon, mods: Alt,       chars: "\x1b;"                       } # Alt + ;
+  - { key: Slash,     mods: Control,   chars: "\x1f"                        } # Ctrl + /
+  - { key: Apostrophe, mods: Control,  chars: "\x18\x40\x63\x27"            } # Ctrl + ''
