@@ -52,4 +52,5 @@
 ;; フレームのピクセル数がフレームの文字サイズ倍でない場合、
 ;; このオプションがnilでも、
 ;; 少なくとも1つのウィンドウがピクセル幅のサイズ変更をされることに注意してください。
-(setq window-resize-pixelwise)
+(setq window-resize-pixelwise t)
+(setq frame-resize-pixelwise t)

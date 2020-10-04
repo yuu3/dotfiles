@@ -133,6 +133,7 @@
   )
   :custom
   (history-delete-duplicates t)
+  (helm-buffer-max-length 50)
 )
 
 (use-package helm-ls-git
