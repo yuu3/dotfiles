@@ -123,14 +123,6 @@
   ("C-c i" . helm-imenu)
   ("C-x r l" . helm-bookmarks))
   :config
-  (custom-set-variables
-    '(helm-split-window-default-side 'right)
-    '(helm-mini-default-sources
-      '(helm-source-buffers-list
-        helm-source-bookmarks
-        helm-source-recentf
-        helm-source-file-cache))
-  )
   (defun helm-buffers-truncate-lines-toggle ()
     (interactive)
     (if (eq helm-buffers-truncate-lines t)
@@ -139,6 +131,12 @@
   :custom
   (history-delete-duplicates t)
   (helm-buffer-max-length 50)
+  (helm-split-window-default-side 'right)
+  (helm-mini-default-sources
+    '(helm-source-buffers-list
+       helm-source-bookmarks
+       helm-source-recentf
+       helm-source-file-cache))
 )
 
 (use-package helm-ls-git
