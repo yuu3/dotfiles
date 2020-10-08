@@ -51,9 +51,3 @@
         (add-hook 'isearch-mode-hook 'isearch-set-initial-string)
         (isearch-forward regexp-p no-recursive-edit)))))
 (define-key isearch-mode-map "\C-w" 'isearch-forward-at-point)
-
-(defun helm-buffers-truncate-lines-toggle ()
-  (interactive)
-  (if (eq helm-buffers-truncate-lines t)
-    (setq helm-buffers-truncate-lines nil)
-    (setq helm-buffers-truncate-lines t)))

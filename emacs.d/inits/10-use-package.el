@@ -131,6 +131,11 @@
         helm-source-recentf
         helm-source-file-cache))
   )
+  (defun helm-buffers-truncate-lines-toggle ()
+    (interactive)
+    (if (eq helm-buffers-truncate-lines t)
+      (setq helm-buffers-truncate-lines nil)
+      (setq helm-buffers-truncate-lines t)))
   :custom
   (history-delete-duplicates t)
   (helm-buffer-max-length 50)
