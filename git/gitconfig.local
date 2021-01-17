@@ -6,3 +6,12 @@ email = yuu@users.noreply.github.com
 #[core]
 #autocrlf = input
 #safecrlf = true
+
+[commit]
+gpgSign = true
+
+[gpg]
+program = /usr/local/bin//krgpg
+
+[tag]
+forceSignAnnotated = true

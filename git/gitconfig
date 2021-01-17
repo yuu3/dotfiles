@@ -19,10 +19,6 @@
     cd = diff --word-diff-regex=.
     s = status
     co = checkout
-    a = add
-    br = branch
-    ci = commit
-    cif = commit --fixup
     d = diff
     dc = diff --cached
     ru = remote update
