@@ -54,7 +54,6 @@
   :config
   (load-theme 'hc-zenburn t)
   (set-face-background 'region "#696969")
-  (set-frame-parameter nil 'alpha 85)
 )
 
 (use-package whitespace
