@@ -407,11 +407,16 @@
 ;;; web
 (use-package web-mode
   :mode
-  (("\\.html\\'" . web-mode)
-  ("\\.js\\'" . web-mode)
-  ("\\.jsx\\'" . web-mode)
-  ("\\.ts\\'" . web-mode)
-  ("\\.tsx\\'" . web-mode))
+  (
+    ("\\.html\\'" . web-mode)
+    ("\\.js\\'" . web-mode)
+    ("\\.jsx\\'" . web-mode)
+    ("\\.tsx\\'" . web-mode)
+    ("\\.erb\\'" . web-mode)
+    ("\\.twig\\'" . web-mode)
+  )
+  :custom
+  (web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
 )
 (use-package emmet-mode)
 
