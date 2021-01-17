@@ -427,3 +427,6 @@
 
 ;;; golang
 (use-package go-mode)
+
+;;; php
+(use-package php-mode)
