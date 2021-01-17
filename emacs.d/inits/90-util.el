@@ -40,3 +40,11 @@
         (add-hook 'isearch-mode-hook 'isearch-set-initial-string)
         (isearch-forward regexp-p no-recursive-edit)))))
 (define-key isearch-mode-map "\C-w" 'isearch-forward-at-point)
+
+(defun new-buffer-frame ()
+  "Create a new frame with a new empty buffer."
+  (interactive)
+  (let ((buffer (generate-new-buffer "untitled")))
+    (set-buffer-major-mode buffer)
+    (display-buffer-same-window buffer nil)))
+(global-set-key (kbd "C-x c n") 'new-buffer-frame)
