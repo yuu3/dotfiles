@@ -418,7 +418,7 @@
 ;; typescript LSP
 (use-package tide
   :init
-  (add-hook 'web-mode
+  (add-hook 'web-mode-hook
     (lambda () (tide-setup))
     )
   :custom
