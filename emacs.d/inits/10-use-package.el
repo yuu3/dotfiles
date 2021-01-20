@@ -158,7 +158,10 @@
 )
 
 (use-package helm-tramp)
-(use-package docker-tramp)
+(use-package docker-tramp
+  :custom
+  (docker-tramp-use-names t)
+)
 (use-package helm-ghq)
 
 (use-package undo-tree
