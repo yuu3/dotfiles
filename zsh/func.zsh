@@ -105,7 +105,7 @@ zle -N zsh-select-history
 bindkey '^[r' zsh-select-history
 
 function peco-dfind() {
-    local selected_dir="$(find . -maxdepth 5 -type f ! -path "*/.*"| sort | peco)"
+    local selected_dir="$(find . -maxdepth 10 -type f ! -path "*/.*"| sort | peco)"
     BUFFER="${LBUFFER}${selected_dir}"
     CURSOR=$#BUFFER
     zle clear-screen
