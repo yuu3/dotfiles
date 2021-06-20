@@ -4,7 +4,13 @@ email = yuu@users.noreply.github.com
 
 # windows only settings
 #[core]
+# value	checkout	commit
+# true	LF -> CRLF	CRLF -> LF
+# input	nothing 	CRLF -> LF
+# false	nothing 	nothing
 #autocrlf = input
+
+# -> CRLFとLFが混じったテキストファイルをコミットできなくする
 #safecrlf = true
 
 [commit]
