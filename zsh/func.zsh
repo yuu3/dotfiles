@@ -125,3 +125,8 @@ rpmshow() {
 resolve-name() {
     ping -c 1 $1 |head -n 1 |grep -Po '(?<=\()\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}(?=\))'
 }
+
+pyhttpserver() {
+    local port=${1:-8080}
+    python -m http.server $port
+}
